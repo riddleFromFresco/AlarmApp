@@ -37,3 +37,12 @@ def test_getWindow(funcToTest3):
 
     assert (expectedName == actualName)
     assert (expectedSize == actualSize)
+
+
+def test_showMessage_Correct(funcToTest4):
+    res = funcToTest4("12:00")
+    assert(res == "Будильник установлен на: 12:00")
+
+def test_showMessage_Incorrect(funcToTest4):
+    res = funcToTest4("122:00E")
+    assert(res == "Некорректный ввод данных")
